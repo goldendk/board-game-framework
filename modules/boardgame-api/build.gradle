@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+group 'org.goldenworkshop'
+version '1.0-SNAPSHOT'
+compileJava.options.encoding = 'UTF-8'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

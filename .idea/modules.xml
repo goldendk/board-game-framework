@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/board-game-framework.modules.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/board-game-framework.modules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.goldenworkshop.board-game-framework.iml" filepath="$PROJECT_DIR$/.idea/modules/org.goldenworkshop.board-game-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.goldenworkshop.board-game-framework.main.iml" filepath="$PROJECT_DIR$/.idea/modules/org.goldenworkshop.board-game-framework.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.goldenworkshop.board-game-framework.test.iml" filepath="$PROJECT_DIR$/.idea/modules/org.goldenworkshop.board-game-framework.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/boardgame-api/org.goldenworkshop.boardgame-api.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/boardgame-api/org.goldenworkshop.boardgame-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/boardgame-api/org.goldenworkshop.boardgame-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/boardgame-api/org.goldenworkshop.boardgame-api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/boardgame-api/org.goldenworkshop.boardgame-api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/boardgame-api/org.goldenworkshop.boardgame-api.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/boardgame-impl/org.goldenworkshop.boardgame-impl.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/boardgame-impl/org.goldenworkshop.boardgame-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/boardgame-impl/org.goldenworkshop.boardgame-impl.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/boardgame-impl/org.goldenworkshop.boardgame-impl.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/boardgame-impl/org.goldenworkshop.boardgame-impl.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/boardgame-impl/org.goldenworkshop.boardgame-impl.test.iml" />
+    </modules>
+  </component>
+</project>

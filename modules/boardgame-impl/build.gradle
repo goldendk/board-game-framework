@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+compileJava.options.encoding = 'UTF-8'
+group 'org.goldenworkshop'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(":modules:boardgame-api")
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

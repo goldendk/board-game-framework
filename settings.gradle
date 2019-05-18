@@ -1,0 +1,5 @@
+rootProject.name = 'board-game-framework'
+include 'modules:boardgame-api', 'modules:boardgame-impl'
+
+findProject(':modules:boardgame-impl')?.name = 'boardgame-impl'
+
