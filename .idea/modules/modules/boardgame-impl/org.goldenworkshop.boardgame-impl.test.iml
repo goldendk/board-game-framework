@@ -3,14 +3,12 @@
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output-test url="file://$MODULE_DIR$/../../../../modules/boardgame-impl/out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../../modules/boardgame-impl/src/test">
-      <sourceFolder url="file://$MODULE_DIR$/../../../../modules/boardgame-impl/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../../modules/boardgame-impl/src/test/resources" type="java-test-resource" />
+    <content url="file://$MODULE_DIR$/../../../../modules/boardgame-demo/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../modules/boardgame-demo/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../modules/boardgame-demo/src/test/resources" type="java-test-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="org.goldenworkshop.boardgame-impl.main" />
-    <orderEntry type="module" module-name="org.goldenworkshop.boardgame-api.main" />
     <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
     <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
   </component>

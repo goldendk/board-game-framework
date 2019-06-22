@@ -2,7 +2,7 @@ package org.goldenworkshop.boardgame.app;
 
 
 import com.goldenworkshop.boardgame.*;
-import com.goldenworkshop.boardgame.game.GameRuleException;
+import com.goldenworkshop.boardgame.GameRuleException;
 
 import java.util.Set;
 
@@ -19,52 +19,6 @@ import java.util.Set;
  */
 public class BoardGameApp {
     public static void main(String... args){
-        BoardGame game = new BoardGame() {
-            @Override
-            public Tile findTile(Coordinate c) {
-                return null;
-            }
 
-            @Override
-            public void movePiece(BoardPiece bp, Tile from, Tile to) throws GameRuleException {
-
-            }
-
-            @Override
-            public void addListener(BoardGameListener listener) {
-
-            }
-
-            @Override
-            public void removeListener(BoardGameListener listener) {
-
-            }
-
-            @Override
-            public void startGame() throws GameRuleException {
-
-            }
-
-            @Override
-            public void endTurn(Player player) throws GameRuleException {
-
-            }
-
-            @Override
-            public void addPlayer(Player player) {
-
-            }
-
-            @Override
-            public Set<Player> getPlayers() {
-                return null;
-            }
-
-            @Override
-            public Set<Tile> getTiles() {
-                return null;
-            }
-        };
-        game.getTiles();
     }
 }

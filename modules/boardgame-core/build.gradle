@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.goldenworkshop'
+version '1.0-SNAPSHOT'
+compileJava.options.encoding = 'UTF-8'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compileOnly 'ch.qos.logback:logback-access:1.0.7'
+    compile 'ch.qos.logback:logback-classic:1.0.7'
+    compileOnly 'ch.qos.logback:logback-core:1.0.7'
+    compile 'commons-logging:commons-logging:1.1.1'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
