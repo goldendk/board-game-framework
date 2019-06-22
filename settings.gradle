@@ -1,5 +1,5 @@
 rootProject.name = 'board-game-framework'
-include 'modules:boardgame-api', 'modules:boardgame-impl'
+include 'modules:boardgame-core', 'modules:boardgame-demo'
 
-findProject(':modules:boardgame-impl')?.name = 'boardgame-impl'
+findProject(':modules:boardgame-demo')?.name = 'boardgame-demo'
 

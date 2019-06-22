@@ -12,6 +12,6 @@ repositories {
 }
 
 dependencies {
-    compile project(":modules:boardgame-api")
+    compile project(":modules:boardgame-core")
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

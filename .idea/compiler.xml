@@ -18,6 +18,10 @@
       <module name="org.goldenworkshop.board-game-framework.test" target="1.8" />
       <module name="org.goldenworkshop.boardgame-api.main" target="1.8" />
       <module name="org.goldenworkshop.boardgame-api.test" target="1.8" />
+      <module name="org.goldenworkshop.boardgame-core.main" target="1.8" />
+      <module name="org.goldenworkshop.boardgame-core.test" target="1.8" />
+      <module name="org.goldenworkshop.boardgame-demo.main" target="1.8" />
+      <module name="org.goldenworkshop.boardgame-demo.test" target="1.8" />
       <module name="org.goldenworkshop.boardgame-impl.main" target="1.8" />
       <module name="org.goldenworkshop.boardgame-impl.test" target="1.8" />
     </bytecodeTargetLevel>

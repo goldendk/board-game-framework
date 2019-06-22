@@ -9,6 +9,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="org.goldenworkshop.boardgame-impl.main" />
+    <orderEntry type="module" module-name="org.goldenworkshop.boardgame-demo.main" />
+    <orderEntry type="module" module-name="org.goldenworkshop.boardgame-core.main" />
+    <orderEntry type="library" name="Gradle: ch.qos.logback:logback-classic:1.0.7" level="project" />
+    <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: ch.qos.logback:logback-core:1.0.7" level="project" />
+    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.6.6" level="project" />
   </component>
 </module>
