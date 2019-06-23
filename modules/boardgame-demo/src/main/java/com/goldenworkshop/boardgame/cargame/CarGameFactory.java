@@ -1,12 +1,14 @@
 package com.goldenworkshop.boardgame.cargame;
 
-import com.goldenworkshop.boardgame.BoardGameFactory;
-import com.goldenworkshop.boardgame.BoardGameState;
+import com.goldenworkshop.boardgame.Board;
 import com.goldenworkshop.boardgame.BoardGame;
+import com.goldenworkshop.boardgame.BoardGameFactory;
+import com.goldenworkshop.boardgame.impl.XYBoard;
 
 public class CarGameFactory implements BoardGameFactory {
+
     @Override
-    public BoardGameState createBoardGameState(BoardGame abstractStandardGame) {
-        return new CarGameState( abstractStandardGame);
+    public Board createBoard(BoardGame game) {
+        return new XYBoard(55, game.getPlayers().size());
     }
 }

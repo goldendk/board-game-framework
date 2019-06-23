@@ -15,7 +15,9 @@ dependencies {
     compile project(':modules:boardgame-core')
     compile project(':modules:boardgame-demo')
 
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'org.junit.platform:junit-platform-runner:1.2.0'
+    testImplementation('org.junit.jupiter:junit-jupiter:5.4.2')
+    testCompile 'org.mockito:mockito-junit-jupiter:2.23.0'
 }
 
 wrapper{

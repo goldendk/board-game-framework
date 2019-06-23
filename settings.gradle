@@ -1,5 +1,4 @@
 rootProject.name = 'board-game-framework'
 include 'modules:boardgame-core', 'modules:boardgame-demo'
 
-findProject(':modules:boardgame-demo')?.name = 'boardgame-demo'
 

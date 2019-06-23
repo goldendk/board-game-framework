@@ -11,6 +11,20 @@ public interface BoardGame {
      void addListener(BoardGameListener listener);
      void removeListener(BoardGameListener listener);
 
+     /**
+      * Starts the game. Should be called once all players have been added to the game.
+      * This method will start the following sequence until the game is started:
+      *
+      * <ol>
+      *     <li><strong>Create the board (setting up tiles)</strong></li>
+      *     <li><strong>Place board pieces on board</strong></li>
+      *     <li><strong>Ask game-rules to select starting player.</strong></li>
+      *     <li><strong>Notify game-rules of first turn.</strong></li>
+      *
+      * </ol>
+      *
+      * @throws GameRuleException
+      */
      void startGame() throws GameRuleException;
 
      /**
@@ -37,5 +51,5 @@ public interface BoardGame {
 
      Tile findTile(Coordinate c);
      Set<Tile> getTiles();
-     void addTile(Tile tile);
+
 }

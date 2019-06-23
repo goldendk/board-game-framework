@@ -13,20 +13,20 @@ import java.util.*;
  *
  */
 public class AbstractStandardGame implements BoardGame {
-    private static Logger logger
+
+    private final BoardGameFactory factory;
     private Map<String, Player> players = new HashMap<>();
-    private Map<String, Tile> tiles = new HashMap<>();
-    private BoardGameState boardGameState = null;
     private Set<BoardGameListener> gameListeners = new HashSet<>();
     private Collection<GameRule> gameRules = new ArrayList<>();
+    private Board board;
 
     public AbstractStandardGame(BoardGameFactory factory) {
-        boardGameState = factory.createBoardGameState(this);
+        this.factory = factory;
     }
 
     @Override
     public Tile findTile(Coordinate c) {
-        return tiles.get(c.getX() + "_" + c.getY());
+        return board.getTile(c);
     }
 
     @Override
@@ -35,13 +35,7 @@ public class AbstractStandardGame implements BoardGame {
     }
 
     @Override
-    public void addTile(Tile tile) {
-
-    }
-
-    @Override
     public void movePiece(BoardPiece bp, Tile from, Tile to) throws GameRuleException {
-        boardGameState.onPieceMoved(bp, from, to);
         for (BoardGameListener listener : this.gameListeners) {
             listener.onPieceMoved(bp, from, to);
         }
@@ -65,12 +59,29 @@ public class AbstractStandardGame implements BoardGame {
 
     @Override
     public void startGame() throws GameRuleException {
+        //setup board.
+        this.board = factory.createBoard(this);
+
+        //find starting player.
+        Player startingPlayer = null;
+        for(GameRule rule: this.gameRules){
+            startingPlayer = rule.pickStartingPlayer(this.getPlayers());
+            if(startingPlayer != null){
+                break;
+            }
+        }
+        if(startingPlayer == null){
+            throw new GameRuleException("No game-rules provided a starting player - cannot start game.");
+        }
+        Player finalStartingPlayer = startingPlayer;
+        gameRules.stream().forEach(e->e.onNewPlayerTurn(finalStartingPlayer));
+
+
 
     }
 
     @Override
     public void endTurn(Player player) throws GameRuleException {
-        boardGameState.onTurnEnd(player);
 
         for (BoardGameListener listener : this.gameListeners) {
             listener.onTurnEnd(player);
@@ -88,6 +99,6 @@ public class AbstractStandardGame implements BoardGame {
 
     @Override
     public Set<Player> getPlayers() {
-        return new HashSet<>(players.values());
+        return Collections.unmodifiableSet(new HashSet<>(players.values()));
     }
 }

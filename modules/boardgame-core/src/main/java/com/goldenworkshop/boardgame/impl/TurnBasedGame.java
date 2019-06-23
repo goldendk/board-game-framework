@@ -7,9 +7,8 @@ import com.goldenworkshop.boardgame.*;
  */
 public class TurnBasedGame extends AbstractStandardGame {
 
+
     public TurnBasedGame(BoardGameFactory factory) {
         super(factory);
     }
-
-
 }

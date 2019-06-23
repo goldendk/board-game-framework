@@ -1,5 +1,7 @@
 package com.goldenworkshop.boardgame;
 
+import java.util.Collection;
+
 /**
  * Interface intended to hold games rules for the implemented games. Developers will want to implement this class and register it
  * with their chosen game using {@link BoardGame#addRule(GameRule)}.
@@ -9,8 +11,9 @@ public interface GameRule {
     /**
      * Called when the game starts to determine which player starts the game.
      * @return
+     * @param players
      */
-    Player pickStartingPlayer();
+    Player pickStartingPlayer(Collection<Player> players);
 
     /**
      * Invoked by the game when a new player starts a turn.
