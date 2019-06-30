@@ -23,3 +23,9 @@ dependencies {
 wrapper{
     gradleVersion='5.4.1'
 }
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}

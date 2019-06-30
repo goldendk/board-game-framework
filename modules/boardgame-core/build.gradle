@@ -14,9 +14,6 @@ repositories {
 
 
 dependencies {
-
-    compile project(':modules:boardgame-core')
-    
     compileOnly 'ch.qos.logback:logback-access:1.0.7'
     compile 'ch.qos.logback:logback-classic:1.0.7'
     compileOnly 'ch.qos.logback:logback-core:1.0.7'
@@ -25,4 +22,12 @@ dependencies {
     testCompile 'org.junit.platform:junit-platform-runner:1.2.0'
     testImplementation('org.junit.jupiter:junit-jupiter:5.4.2')
     testCompile 'org.mockito:mockito-junit-jupiter:2.23.0'
+}
+
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
 }
