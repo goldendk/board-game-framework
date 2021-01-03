@@ -1,8 +1,6 @@
 package com.goldenworkshop.boardgame.cargame;
 
-import com.goldenworkshop.boardgame.GameRule;
-import com.goldenworkshop.boardgame.Player;
-import com.goldenworkshop.boardgame.Tile;
+import com.goldenworkshop.boardgame.*;
 
 import java.util.Collection;
 
@@ -18,7 +16,15 @@ public class CarGameRule implements GameRule {
     }
 
     @Override
-    public boolean isMoveAllowed(Tile from, Tile to, Player p) {
-        return false;
+    public boolean isMoveAllowed(Tile from, Tile to, BoardPiece boardPiece, DiceRoll diceRoll) {
+        int distance = to.getCoordinate().getX() - from.getCoordinate().getX();
+
+        if (distance == diceRoll.getSum()
+                && from.getBoardPieces().contains(boardPiece)) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
 }

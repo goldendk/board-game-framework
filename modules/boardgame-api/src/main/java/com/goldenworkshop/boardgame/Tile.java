@@ -25,4 +25,6 @@ public interface Tile {
      * @return
      */
     List<BoardPiece> getBoardPieces();
+
+    void removeBoardPiece(BoardPiece bp);
 }

@@ -1,8 +1,6 @@
 package com.goldenworkshop.boardgame.impl;
 
-import com.goldenworkshop.boardgame.BoardPiece;
-import com.goldenworkshop.boardgame.Coordinate;
-import com.goldenworkshop.boardgame.Tile;
+import com.goldenworkshop.boardgame.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +13,7 @@ public class BasicTile implements Tile {
 
     private final Coordinate coordinate;
     private final List<BoardPiece> boardPieces = new ArrayList<>();
+
     public BasicTile(Coordinate coordinate) {
         this.coordinate = coordinate;
     }
@@ -31,6 +30,22 @@ public class BasicTile implements Tile {
 
     @Override
     public List<BoardPiece> getBoardPieces() {
-        return null;
+        return boardPieces;
+    }
+
+    @Override
+    public void removeBoardPiece(BoardPiece bp) {
+        if(!boardPieces.contains(bp)){
+            throw new GameRuleException(this.toString() + " does not contain " + bp.toString());
+        }
+        this.boardPieces.remove(bp);
+    }
+
+    @Override
+    public String toString() {
+        return "BasicTile{" +
+                "coordinate=" + coordinate +
+                ", boardPieces=" + boardPieces +
+                '}';
     }
 }

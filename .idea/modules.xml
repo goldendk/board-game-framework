@@ -6,6 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.goldenworkshop.board-game-framework.iml" filepath="$PROJECT_DIR$/.idea/modules/org.goldenworkshop.board-game-framework.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.goldenworkshop.board-game-framework.main.iml" filepath="$PROJECT_DIR$/.idea/modules/org.goldenworkshop.board-game-framework.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.goldenworkshop.board-game-framework.test.iml" filepath="$PROJECT_DIR$/.idea/modules/org.goldenworkshop.board-game-framework.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/boardgame-api/org.goldenworkshop.boardgame-api.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/boardgame-api/org.goldenworkshop.boardgame-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/boardgame-api/org.goldenworkshop.boardgame-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/boardgame-api/org.goldenworkshop.boardgame-api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/boardgame-api/org.goldenworkshop.boardgame-api.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/boardgame-api/org.goldenworkshop.boardgame-api.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/boardgame-core/org.goldenworkshop.boardgame-core.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/boardgame-core/org.goldenworkshop.boardgame-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/boardgame-core/org.goldenworkshop.boardgame-core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/boardgame-core/org.goldenworkshop.boardgame-core.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/modules/boardgame-core/org.goldenworkshop.boardgame-core.test.iml" filepath="$PROJECT_DIR$/.idea/modules/modules/boardgame-core/org.goldenworkshop.boardgame-core.test.iml" />

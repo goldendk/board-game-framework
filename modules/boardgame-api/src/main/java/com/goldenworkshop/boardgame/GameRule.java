@@ -10,13 +10,15 @@ public interface GameRule {
 
     /**
      * Called when the game starts to determine which player starts the game.
-     * @return
+     *
      * @param players
+     * @return
      */
     Player pickStartingPlayer(Collection<Player> players);
 
     /**
      * Invoked by the game when a new player starts a turn.
+     *
      * @param player
      */
     void onNewPlayerTurn(Player player);
@@ -24,14 +26,13 @@ public interface GameRule {
     /**
      * Invoked before moving any player's pieces on the board. It is up the the game implementation to determine which
      * actions to take when true or false is returned.
-     * @see com.goldenworkshop.boardgame.impl.AbstractStandardGame for example implementation.
+     *
      * @param from
      * @param to
-     * @param p
+     * @param boardPiece
      * @return
      */
-    boolean isMoveAllowed(Tile from, Tile to, Player p);
-
+    boolean isMoveAllowed(Tile from, Tile to, BoardPiece boardPiece, DiceRoll diceRoll);
 
 
 }

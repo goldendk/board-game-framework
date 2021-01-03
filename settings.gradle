@@ -1,4 +1,6 @@
 rootProject.name = 'board-game-framework'
-include 'modules:boardgame-core', 'modules:boardgame-demo'
+include 'modules:boardgame-core', 
+        'modules:boardgame-demo',
+'modules:boardgame-api'
 
 

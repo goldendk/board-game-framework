@@ -2,6 +2,7 @@ package com.goldenworkshop.boardgame.impl;
 
 import com.goldenworkshop.boardgame.Board;
 import com.goldenworkshop.boardgame.Coordinate;
+import com.goldenworkshop.boardgame.GameStateException;
 import com.goldenworkshop.boardgame.Tile;
 
 import java.util.Collection;
@@ -43,6 +44,10 @@ public class XYBoard implements Board {
 
     @Override
     public Tile getTile(Coordinate coordinate) {
-        return tileMap.get(coordinate);
+        Tile tile = tileMap.get(coordinate);
+        if(tile == null){
+            throw new GameStateException("Tile for " + coordinate + " does not exist");
+        }
+        return tile;
     }
 }
