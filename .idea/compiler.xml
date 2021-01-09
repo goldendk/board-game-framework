@@ -11,11 +11,9 @@
       <entry name="!?*.kt" />
       <entry name="!?*.clj" />
     </wildcardResourcePatterns>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="org.goldenworkshop.board-game-framework-core.main" target="1.8" />
       <module name="org.goldenworkshop.board-game-framework-core.test" target="1.8" />
-      <module name="org.goldenworkshop.board-game-framework.main" target="1.8" />
-      <module name="org.goldenworkshop.board-game-framework.test" target="1.8" />
       <module name="org.goldenworkshop.boardgame-api.main" target="1.8" />
       <module name="org.goldenworkshop.boardgame-api.test" target="1.8" />
       <module name="org.goldenworkshop.boardgame-core.main" target="1.8" />

@@ -25,7 +25,7 @@ public class CarGame extends StandardGame {
 
     @Override
     public void setupGameRules() {
-
+        this.addRule(new CarGameRule());
     }
 
 

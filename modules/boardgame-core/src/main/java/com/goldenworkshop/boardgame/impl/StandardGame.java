@@ -33,11 +33,11 @@ public abstract class StandardGame implements BoardGame {
     }
 
     private void initialize() {
-        this.setState(GameState.INITIAL);
+        this.changeState(GameState.INITIAL);
         setupGameRules();
     }
 
-    private void setState(GameState state) {
+    private void changeState(GameState state) {
         this.state = state;
     }
 
@@ -53,18 +53,28 @@ public abstract class StandardGame implements BoardGame {
 
     @Override
     public void movePiece(BoardPiece bp, Tile from, Tile to, DiceRoll diceRoll) throws GameRuleException {
-        for (GameRule rule : this.gameRules) {
-            if (!rule.isMoveAllowed(from, to, bp, diceRoll)) {
-                throw new GameRuleException("Move from " + from + " to " + to + " is not allowed with roll " + diceRoll);
-            }
-        }
+        StandardGameHelper.checkMoveAllowed(bp, from, to, diceRoll, this.gameRules);
+
         from.removeBoardPiece(bp);
         to.addBoardPiece(bp);
 
-        for (BoardGameListener listener : this.gameListeners) {
-            listener.onPieceMoved(bp, from, to);
-        }
+        StandardGameHelper.notifyListenersOfMovement(bp, from, to, this.gameListeners);
+
+        checkForWinner();
     }
+
+    private void checkForWinner() {
+        Optional<Player> foundWinner = Optional.empty();
+        for (GameRule gameRule : this.gameRules) {
+            Optional<Player> winner = gameRule.selectWinner(this.getBoard(), this.getPlayers());
+            if (winner.isPresent()) {
+                foundWinner = winner;
+            }
+        }
+        this.changeState(GameState.GAME_OVER);
+        foundWinner.ifPresent(player -> StandardGameHelper.notifyListenersOfWinnerAndLosers(player, this.gameListeners));
+    }
+
 
     /**
      * Called when the game is being instantiated. Should add all game-rules to the game state.
@@ -89,6 +99,10 @@ public abstract class StandardGame implements BoardGame {
 
     @Override
     public void startGame() throws GameRuleException {
+        if (this.getPlayers().isEmpty()) {
+            throw new GameStateException("Game cannot be started without players. Add all players before starting game");
+        }
+
         //setup board.
         this.board = factory.createBoard(this);
 
@@ -107,7 +121,7 @@ public abstract class StandardGame implements BoardGame {
             throw new GameStateException("No game-rules provided a starting player - cannot start game.");
         }
         Player finalStartingPlayer = startingPlayer;
-        this.setState(GameState.IN_GAME);
+        this.changeState(GameState.IN_GAME);
         gameRules.stream().forEach(e -> e.onNewPlayerTurn(finalStartingPlayer));
         startTurn(startingPlayer);
 

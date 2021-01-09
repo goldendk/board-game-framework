@@ -23,4 +23,12 @@ public class BasicPlayer implements Player {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "BasicPlayer{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

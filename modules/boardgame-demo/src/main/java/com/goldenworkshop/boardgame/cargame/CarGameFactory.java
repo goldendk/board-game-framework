@@ -5,10 +5,15 @@ import com.goldenworkshop.boardgame.impl.D6DiceRoller;
 import com.goldenworkshop.boardgame.impl.XYBoard;
 
 public class CarGameFactory implements BoardGameFactory {
+    private final int boardLength;
+
+    public CarGameFactory(int boardLength){
+        this.boardLength = boardLength;
+    }
 
     @Override
     public Board createBoard(BoardGame game) {
-        return new XYBoard(55, game.getPlayers().size());
+        return new XYBoard(boardLength, game.getPlayers().size());
     }
 
 

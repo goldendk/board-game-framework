@@ -1,6 +1,7 @@
 package com.goldenworkshop.boardgame;
 
 import java.util.Collection;
+import java.util.Optional;
 
 /**
  * Interface intended to hold games rules for the implemented games. Developers will want to implement this class and register it
@@ -34,5 +35,5 @@ public interface GameRule {
      */
     boolean isMoveAllowed(Tile from, Tile to, BoardPiece boardPiece, DiceRoll diceRoll);
 
-
+    Optional<Player> selectWinner(Board board, Collection<Player> players);
 }
