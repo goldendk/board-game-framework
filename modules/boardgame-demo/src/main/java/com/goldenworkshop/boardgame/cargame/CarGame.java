@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class CarGame extends StandardGame {
 
-    public static final String BOARDPIECE_TYPE_CAR = "CAR";
+    public static final BoardPieceType BOARD_PIECE_TYPE_CAR = BoardPieceType.fromValue("car");
 
     public CarGame(CarGameFactory factory) {
         super(factory);

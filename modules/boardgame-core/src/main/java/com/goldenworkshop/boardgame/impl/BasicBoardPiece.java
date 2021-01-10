@@ -1,6 +1,7 @@
 package com.goldenworkshop.boardgame.impl;
 
 import com.goldenworkshop.boardgame.BoardPiece;
+import com.goldenworkshop.boardgame.BoardPieceType;
 import com.goldenworkshop.boardgame.Player;
 
 public class BasicBoardPiece implements BoardPiece {
@@ -8,9 +9,9 @@ public class BasicBoardPiece implements BoardPiece {
 
     private Player player;
 
-    private String type;
+    private BoardPieceType type;
 
-    public BasicBoardPiece(String id, Player player, String type) {
+    public BasicBoardPiece(String id, Player player, BoardPieceType type) {
         this.id = id;
         this.player = player;
         this.type = type;
@@ -27,7 +28,7 @@ public class BasicBoardPiece implements BoardPiece {
     }
 
     @Override
-    public String getType() {
+    public BoardPieceType getType() {
         return type;
     }
 

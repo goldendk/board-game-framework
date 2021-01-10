@@ -6,5 +6,5 @@ public interface BoardPiece {
 
     String getId();
 
-    String getType();
+    BoardPieceType getType();
 }

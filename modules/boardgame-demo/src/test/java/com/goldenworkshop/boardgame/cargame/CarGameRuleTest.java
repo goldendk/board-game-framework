@@ -13,6 +13,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.ServiceLoader;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertSame;
@@ -27,7 +28,7 @@ public class CarGameRuleTest {
     Player player1;
     @Mock Player player2;
     private final DiceRoll diceRollOf2 = new BasicDieRoll(new int[]{2});
-    private final BoardPiece player1Piece = new BasicBoardPiece("pl1bp1", player1, "car");
+    private final BoardPiece player1Piece = new BasicBoardPiece("pl1bp1", player1, CarGame.BOARD_PIECE_TYPE_CAR);
 
     @Test
     public void shouldStartWithFirstPlayer() {

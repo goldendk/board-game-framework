@@ -107,7 +107,7 @@ public abstract class StandardGame implements BoardGame {
         this.board = factory.createBoard(this);
 
         BoardPieceLayout boardPieceLayout = this.factory.createBoardPieceLayout();
-        boardPieceLayout.setupInitialPostions(board, this.getPlayers());
+        boardPieceLayout.setupInitialPositions(board, this.getPlayers());
 
         //find starting player.
         Player startingPlayer = null;

@@ -2,14 +2,16 @@ package com.goldenworkshop.boardgame.cargame;
 
 import com.goldenworkshop.boardgame.*;
 import com.goldenworkshop.boardgame.impl.XYCoordinate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.Optional;
-import java.util.logging.Logger;
 
 public class CarGameRule implements GameRule {
-    public static Logger logger = Logger.getLogger(CarGameRule.class.getName());
+    public static Logger logger = LoggerFactory.getLogger(CarGameRule.class);
+
     @Override
     public Player pickStartingPlayer(Collection<Player> players) {
         return players.iterator().next();

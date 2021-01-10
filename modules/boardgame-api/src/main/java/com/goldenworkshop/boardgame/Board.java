@@ -19,4 +19,12 @@ public interface Board {
      * @return The Tile found, null if none found.
      */
     Tile getTile(Coordinate coordinate);
+
+    /**
+     * the maximum value of the x-coordinate for this board.
+     * @return
+     */
+    int getMaxX();
+
+    int getMaxY();
 }

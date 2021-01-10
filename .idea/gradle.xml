@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/modules" />
             <option value="$PROJECT_DIR$/modules/boardgame-api" />
             <option value="$PROJECT_DIR$/modules/boardgame-core" />
+            <option value="$PROJECT_DIR$/modules/boardgame-core-ui" />
             <option value="$PROJECT_DIR$/modules/boardgame-demo" />
           </set>
         </option>

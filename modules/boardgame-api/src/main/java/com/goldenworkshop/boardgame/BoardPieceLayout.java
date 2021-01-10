@@ -8,5 +8,5 @@ public interface BoardPieceLayout {
      * @param board
      * @param players the players in the order they were added to the game.
      */
-    void setupInitialPostions(Board board, List<Player> players);
+    void setupInitialPositions(Board board, List<Player> players);
 }

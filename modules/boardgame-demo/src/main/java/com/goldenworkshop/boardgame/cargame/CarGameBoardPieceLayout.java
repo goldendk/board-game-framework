@@ -8,14 +8,14 @@ import java.util.List;
 
 public class CarGameBoardPieceLayout implements BoardPieceLayout {
     @Override
-    public void setupInitialPostions(Board board, List<Player> players) {
+    public void setupInitialPositions(Board board, List<Player> players) {
 
 
         for (int i = 0; i < players.size(); i++) {
             Tile tile = board.getTile(new XYCoordinate(0, i));
             Player p = players.get(i);
 
-            BoardPiece bp = new BasicBoardPiece(p.getId() + "bp", p, CarGame.BOARDPIECE_TYPE_CAR);
+            BoardPiece bp = new BasicBoardPiece(p.getId() + "bp", p, CarGame.BOARD_PIECE_TYPE_CAR);
 
             tile.addBoardPiece(bp);
         }
