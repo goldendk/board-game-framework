@@ -78,4 +78,6 @@ public interface BoardGame {
     Collection<BoardPiece> getBoardPieces(Player player);
 
     Tile getTile(BoardPiece player1Piece);
+
+    Board getBoard();
 }

@@ -43,7 +43,7 @@ public class CarGameTest {
     @BeforeEach
     public void setUp() throws Exception {
 
-        carGameFactorySpy = spy(new CarGameFactory(10));
+        carGameFactorySpy = spy(new CarGameFactory(10, "JUnit game"));
         game = new CarGame(carGameFactorySpy);
         player1 = new BasicPlayer("player1");
         player2 = new BasicPlayer("player2");

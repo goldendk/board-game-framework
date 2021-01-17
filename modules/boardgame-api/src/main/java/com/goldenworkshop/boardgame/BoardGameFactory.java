@@ -5,4 +5,7 @@ public interface BoardGameFactory {
     Board createBoard(BoardGame game);
     DiceRoller createDiceRoller();
     BoardPieceLayout createBoardPieceLayout();
+
+    String getTitle();
+
 }

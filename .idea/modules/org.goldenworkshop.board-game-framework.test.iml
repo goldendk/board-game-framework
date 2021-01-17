@@ -9,7 +9,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="org.goldenworkshop.board-game-framework.main" />
     <orderEntry type="module" module-name="board-game-framework.modules.boardgame-demo.main" />
     <orderEntry type="module" module-name="board-game-framework.modules.boardgame-core.main" />
     <orderEntry type="library" name="Gradle: ch.qos.logback:logback-classic:1.2.3" level="project" />

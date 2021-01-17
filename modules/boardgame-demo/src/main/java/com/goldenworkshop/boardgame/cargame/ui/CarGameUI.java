@@ -1,14 +1,17 @@
-package com.goldenworkshop.boardgame.impl.listeners;
+package com.goldenworkshop.boardgame.cargame.ui;
 
 import com.goldenworkshop.boardgame.*;
+import com.goldenworkshop.boardgame.ui.XYBoardRenderer;
 
-public class GameEndListener implements BoardGameListener {
-    private GameResult gameResult;
-    private Player winner;
+public class CarGameUI extends XYBoardRenderer implements BoardGameListener {
+    public CarGameUI(BoardGameFactory factory) {
+        super(factory);
+    }
 
     @Override
     public void onPieceMoved(BoardPiece boardPiece, Tile from, Tile to) {
-
+        getBoardUi().updateTile(from);
+        getBoardUi().updateTile(to);
     }
 
     @Override
@@ -22,14 +25,14 @@ public class GameEndListener implements BoardGameListener {
     }
 
     @Override
-    public void onGameStarted(BoardGame boardGame) {
-
+    public void onGameStarted(BoardGame game) {
+        this.setupInitialState(game.getBoard(), game.getPlayers());
+        game.getTiles().forEach(tile -> getBoardUi().updateTile(tile));
     }
 
     @Override
     public void onGameFinished(Player winner, GameResult result) {
-        this.winner = winner;
-        this.gameResult = result;
+
     }
 
     @Override
@@ -40,13 +43,5 @@ public class GameEndListener implements BoardGameListener {
     @Override
     public void onTurnEnd(Player player) {
 
-    }
-
-    public GameResult getGameResult() {
-        return gameResult;
-    }
-
-    public Player getWinner() {
-        return winner;
     }
 }

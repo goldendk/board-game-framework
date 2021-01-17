@@ -21,6 +21,11 @@ public class CurrentPlayerListener implements BoardGameListener {
     }
 
     @Override
+    public void onGameStarted(BoardGame boardGame) {
+
+    }
+
+    @Override
     public void onGameFinished(Player player, GameResult result) {
 
     }

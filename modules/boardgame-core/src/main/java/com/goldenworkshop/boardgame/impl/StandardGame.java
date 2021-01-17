@@ -48,7 +48,7 @@ public abstract class StandardGame implements BoardGame {
 
     @Override
     public Set<Tile> getTiles() {
-        return null;
+        return Collections.unmodifiableSet(new HashSet<>(this.board.getTiles()));
     }
 
     @Override
@@ -123,6 +123,9 @@ public abstract class StandardGame implements BoardGame {
         Player finalStartingPlayer = startingPlayer;
         this.changeState(GameState.IN_GAME);
         gameRules.stream().forEach(e -> e.onNewPlayerTurn(finalStartingPlayer));
+
+        gameListeners.forEach(e -> e.onGameStarted(this));
+
         startTurn(startingPlayer);
 
     }
@@ -183,7 +186,7 @@ public abstract class StandardGame implements BoardGame {
         throw new GameStateException("BoardPiece does not have a tile, where did you find it? : " + boardPiece);
     }
 
-    protected Board getBoard() {
+    public Board getBoard() {
         return board;
     }
 }

@@ -7,6 +7,7 @@ public interface BoardGameListener {
 
 
     void onScoreChanged(Player player, int score);
+    void onGameStarted(BoardGame boardGame);
     void onGameFinished(Player winner, GameResult result);
 
 

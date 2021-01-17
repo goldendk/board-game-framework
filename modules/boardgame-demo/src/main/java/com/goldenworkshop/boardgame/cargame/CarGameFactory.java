@@ -6,9 +6,12 @@ import com.goldenworkshop.boardgame.impl.XYBoard;
 
 public class CarGameFactory implements BoardGameFactory {
     private final int boardLength;
+    private String title;
 
-    public CarGameFactory(int boardLength){
+    public CarGameFactory(int boardLength, String title) {
         this.boardLength = boardLength;
+        this.title = title;
+
     }
 
     @Override
@@ -25,5 +28,11 @@ public class CarGameFactory implements BoardGameFactory {
     public BoardPieceLayout createBoardPieceLayout() {
         return new CarGameBoardPieceLayout();
     }
+
+    @Override
+    public String getTitle() {
+        return this.title;
+    }
+
 
 }

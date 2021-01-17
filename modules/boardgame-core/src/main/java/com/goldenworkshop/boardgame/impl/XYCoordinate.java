@@ -31,6 +31,14 @@ public class XYCoordinate implements Coordinate {
     }
 
     @Override
+    public String toString() {
+        return "XYCoordinate{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(x, y);
     }

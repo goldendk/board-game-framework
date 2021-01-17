@@ -1,8 +1,6 @@
 package com.goldenworkshop.boardgame.ui;
 
-import com.goldenworkshop.boardgame.Board;
-import com.goldenworkshop.boardgame.Player;
-import com.goldenworkshop.boardgame.Tile;
+import com.goldenworkshop.boardgame.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -108,7 +106,28 @@ public class XYSwingBoard {
         addTilesToTileContainer(boardColumns, boardRows);
     }
 
-    public void updateTile(Tile tile){
+    /**
+     * Updates the Tile according to the current state of the Tile.
+     *
+     * @param tile the tile to be updated.
+     */
+    public void updateTile(Tile tile) {
+        Coordinate coordinate = tile.getCoordinate();
+
+        JButton tileButton = boardSquares[coordinate.getY()][coordinate.getX()];
+
+        if (tileButton == null) {
+            throw new GameStateException("Found no button representing tile: " + coordinate);
+        }
+
+        // clear the button for board-pieces.
+        tileButton.setIcon(null);
+
+        for (BoardPiece boardPiece : tile.getBoardPieces()) {
+            Image image = this.playerIcons.get(boardPiece.getPlayer());
+            tileButton.setIcon(new ImageIcon(image));
+        }
+
 
     }
 
@@ -144,6 +163,7 @@ public class XYSwingBoard {
 
     /**
      * Registers the player on the board. Will do several things such as assign an icon for the player.
+     *
      * @param player
      */
     public void registerPlayer(Player player) {
